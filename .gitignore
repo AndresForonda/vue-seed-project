@@ -1,10 +1,33 @@
-# Logs
+.DS_Store
+/dist
+
+/tests/e2e/videos/
+/tests/e2e/screenshots/
+
+
+# local env files
+.env.local
+.env.*.local
+
+# Log files
 logs
-*.log
 npm-debug.log*
+lerna-debug.log*
 yarn-debug.log*
 yarn-error.log*
-lerna-debug.log*
+pnpm-debug.log*
+*.log
+
+# Editor directories and files
+.idea
+.vscode
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+# Logs
+
 
 # Diagnostic reports (https://nodejs.org/api/report.html)
 report.[0-9]*.[0-9]*.[0-9]*.[0-9]*.json
