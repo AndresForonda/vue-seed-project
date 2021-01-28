@@ -140,3 +140,5 @@ npm run test:e2e
 ```
 npm run lint
 ```
+# tw-vue-bootstrap-template
+Template for VUE.js projects
