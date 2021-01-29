@@ -38,7 +38,7 @@ These components can be grouped by functionality:
  ┃ ┃ ┣ 📜 VRangeDateInput.vue
  ┃ ┃ ┣ 📜 VSelectInput.vue
  ┃ ┃ ┗ 📜 VTextInput.vue
- ┃ ┗ 📂 layout
+ ┃ ┣ 📂 layout
  ┃ ┃ ┣ 📜 TheAppShell.vue
  ┃ ┃ ┣ 📜 TheBreadcrumb.vue
  ┃ ┃ ┣ 📜 TheHeader.vue
@@ -119,15 +119,15 @@ The content of the view could be complex, maybe can be composed for many compone
 📦 src
  ┣ 📂 views
  ┃ ┣ 📂 home
- ┃ ┃ ┗ 📜 HomeLayout.vue
+ ┃ ┃ ┣ 📜 HomeLayout.vue
  ┃ ┃ ┣ 📂 components
  ┃ ┃ ┃ ┗ 📜 HomeHeader.vue
  ┃ ┃ ┣ 📂 content
- ┃ ┃ ┃ ┗ 📜 HomeContentLayout.vue
+ ┃ ┃ ┃ ┣ 📜 HomeContentLayout.vue
  ┃ ┃ ┃ ┣ 📂 components
- ┃ ┃ ┃ ┃ ┗ 📜 HomeContentTable.vue
+ ┃ ┃ ┃ ┃ ┣ 📜 HomeContentTable.vue
  ┃ ┃ ┃ ┃ ┣ 📂 home-content-options
- ┃ ┃ ┃ ┃ ┃ ┗ 📜 HomeContentOptions.vue
+ ┃ ┃ ┃ ┃ ┃ ┣ 📜 HomeContentOptions.vue
  ┃ ┃ ┃ ┃ ┃ ┣ 📂 components
  ┃ ┃ ┃ ┃ ┃ ┃ ┣ 📜 HomeContentOptionsList.vue
  ┃ ┃ ┃ ┃ ┃ ┃ ┗ 📜 HomeContentOptionsModal.vue
@@ -140,110 +140,109 @@ The content of the view could be complex, maybe can be composed for many compone
 
 Yeah, it could be overwhelming, it's nested, very nested, I mean, it's really nested!, but going further, the context of each component and its components is clear and coupled.
 
-#### Comparing structures
+## Comparing structures
 
-- Proposed vs Single root, folder structures
+### Proposed vs Single root, folder structures
 
-- - Proposed
+* Proposed
 
-```
-📦 src
- ┣ 📂 views
- ┃ ┣ 📂 home
- ┃ ┃ ┣ 📂 components
- ┃ ┃ ┣ 📂 content
- ┃ ┃ ┃ ┣ 📂 components
- ┃ ┃ ┃ ┃ ┣ 📂 home-content-options
- ┃ ┃ ┃ ┃ ┃ ┣ 📂 components
-```
+  ```
+  📦 src
+  ┣ 📂 views
+  ┃ ┣ 📂 home
+  ┃ ┃ ┣ 📂 components
+  ┃ ┃ ┣ 📂 content
+  ┃ ┃ ┃ ┣ 📂 components
+  ┃ ┃ ┃ ┃ ┣ 📂 home-content-options
+  ┃ ┃ ┃ ┃ ┃ ┣ 📂 components
+  ```
 
 
-- - Single root
+* Single root
 
-```
-📦 src
- ┣ 📂 views
- ┃ ┣ 📂 home
-```
+  ```
+  📦 src
+  ┣ 📂 views
+  ┃ ┣ 📂 home
+  ```
 
-- Proposed vs Single root, file structure
+### Proposed vs Single root, file structure
 
-- - Proposed
+* Proposed
 
-```
-📦 src
- ┣ 📂 views
- ┃ ┣ 📂 home
- ┃ ┃ ┣ 📜 HomeLayout.vue
- ┃ ┃ ┣ 📂 components
- ┃ ┃ ┃ ┣ 📜 HomeHeader.vue
- ┃ ┃ ┃ ┣ 📜 HomeFooter.vue
- ┃ ┃ ┃ ┣ 📜 HomeOptions.vue
- ┃ ┃ ┃ ┗ 📜 HomeSideNotes.vue
- ┃ ┃ ┣ 📂 content
- ┃ ┃ ┃ ┣ 📜 HomeContentLayout.vue
- ┃ ┃ ┃ ┣ 📂 components
- ┃ ┃ ┃ ┃ ┣ 📜 HomeContentTable.vue
- ┃ ┃ ┃ ┃ ┣ 📜 HomeContentTools.vue
- ┃ ┃ ┃ ┃ ┣ 📂 home-content-options
- ┃ ┃ ┃ ┃ ┃ ┣ 📜 HomeContentOptions.vue
- ┃ ┃ ┃ ┃ ┃ ┣ 📂 components
- ┃ ┃ ┃ ┃ ┃ ┃ ┣ 📜 HomeContentOptionsList.vue
- ┃ ┃ ┃ ┃ ┃ ┃ ┣ 📜 HomeContentOptionsModal.vue
- ┃ ┃ ┃ ┃ ┃ ┃ ┗ 📜 HomeContentOptionsLoad.vue
-```
+  ```
+  📦 src
+  ┣ 📂 views
+  ┃ ┣ 📂 home
+  ┃ ┃ ┣ 📜 HomeLayout.vue
+  ┃ ┃ ┣ 📂 components
+  ┃ ┃ ┃ ┣ 📜 HomeHeader.vue
+  ┃ ┃ ┃ ┣ 📜 HomeFooter.vue
+  ┃ ┃ ┃ ┣ 📜 HomeOptions.vue
+  ┃ ┃ ┃ ┗ 📜 HomeSideNotes.vue
+  ┃ ┃ ┣ 📂 content
+  ┃ ┃ ┃ ┣ 📜 HomeContentLayout.vue
+  ┃ ┃ ┃ ┣ 📂 components
+  ┃ ┃ ┃ ┃ ┣ 📜 HomeContentTable.vue
+  ┃ ┃ ┃ ┃ ┣ 📜 HomeContentTools.vue
+  ┃ ┃ ┃ ┃ ┣ 📂 home-content-options
+  ┃ ┃ ┃ ┃ ┃ ┣ 📜 HomeContentOptions.vue
+  ┃ ┃ ┃ ┃ ┃ ┣ 📂 components
+  ┃ ┃ ┃ ┃ ┃ ┃ ┣ 📜 HomeContentOptionsList.vue
+  ┃ ┃ ┃ ┃ ┃ ┃ ┣ 📜 HomeContentOptionsModal.vue
+  ┃ ┃ ┃ ┃ ┃ ┃ ┗ 📜 HomeContentOptionsLoad.vue
+  ```
 
-- - Single root
+* Single root
 
-```
-📦 src
- ┣ 📂 views
- ┃ ┣ 📂 home 
- ┃ ┃ ┣ 📜 HomeContentOptions.vue
- ┃ ┃ ┣ 📜 HomeContentOptionsList.vue
- ┃ ┃ ┣ 📜 HomeContentOptionsModal.vue
- ┃ ┃ ┣ 📜 HomeContentOptionsLoad.vue
- ┃ ┃ ┣ 📜 HomeContentLayout.vue
- ┃ ┃ ┣ 📜 HomeContentTable.vue 
- ┃ ┃ ┣ 📜 HomeContentTools.vue
- ┃ ┃ ┣ 📜 HomeFooter.vue
- ┃ ┃ ┣ 📜 HomeHeader.vue
- ┃ ┃ ┣ 📜 HomeLayout.vue
- ┃ ┃ ┣ 📜 HomeOptions.vue
- ┃ ┃ ┣ 📜 HomeSideNotes.vue
-```
+  ```
+  📦 src
+  ┣ 📂 views
+  ┃ ┣ 📂 home 
+  ┃ ┃ ┣ 📜 HomeContentOptions.vue
+  ┃ ┃ ┣ 📜 HomeContentOptionsList.vue
+  ┃ ┃ ┣ 📜 HomeContentOptionsModal.vue
+  ┃ ┃ ┣ 📜 HomeContentOptionsLoad.vue
+  ┃ ┃ ┣ 📜 HomeContentLayout.vue
+  ┃ ┃ ┣ 📜 HomeContentTable.vue 
+  ┃ ┃ ┣ 📜 HomeContentTools.vue
+  ┃ ┃ ┣ 📜 HomeFooter.vue
+  ┃ ┃ ┣ 📜 HomeHeader.vue
+  ┃ ┃ ┣ 📜 HomeLayout.vue
+  ┃ ┃ ┣ 📜 HomeOptions.vue
+  ┃ ┃ ┣ 📜 HomeSideNotes.vue
+  ```
 
-- Proposed vs Single root, working context (HomeContentOptions)
+### Proposed vs Single root, working context (HomeContentOptions)
 
-- - Proposed
+* Proposed
 
-```
-📂 home-content-options
- ┣ 📜 HomeContentOptions.vue
- ┣ 📂 components
- ┃ ┣ 📜 HomeContentOptionsList.vue
- ┃ ┣ 📜 HomeContentOptionsModal.vue
- ┃ ┗ 📜 HomeContentOptionsLoad.vue
-```
+  ```
+  📂 home-content-options
+  ┣ 📜 HomeContentOptions.vue
+  ┣ 📂 components
+  ┃ ┣ 📜 HomeContentOptionsList.vue
+  ┃ ┣ 📜 HomeContentOptionsModal.vue
+  ┃ ┗ 📜 HomeContentOptionsLoad.vue
+  ```
 
-- - Single root
+* Single root
 
-```
- 📂 home 
- ┣ 📜 HomeContentOptions.vue
- ┣ 📜 HomeContentOptionsList.vue
- ┣ 📜 HomeContentOptionsModal.vue
- ┣ 📜 HomeContentOptionsLoad.vue
- ┣ 📜 HomeContentLayout.vue
- ┣ 📜 HomeContentTable.vue 
- ┣ 📜 HomeContentTools.vue
- ┣ 📜 HomeFooter.vue
- ┣ 📜 HomeHeader.vue
- ┣ 📜 HomeLayout.vue
- ┣ 📜 HomeOptions.vue
- ┣ 📜 HomeSideNotes.vue
-```
-
+  ```
+  📂 home 
+  ┣ 📜 HomeContentOptions.vue
+  ┣ 📜 HomeContentOptionsList.vue
+  ┣ 📜 HomeContentOptionsModal.vue
+  ┣ 📜 HomeContentOptionsLoad.vue
+  ┣ 📜 HomeContentLayout.vue
+  ┣ 📜 HomeContentTable.vue 
+  ┣ 📜 HomeContentTools.vue
+  ┣ 📜 HomeFooter.vue
+  ┣ 📜 HomeHeader.vue
+  ┣ 📜 HomeLayout.vue
+  ┣ 📜 HomeOptions.vue
+  ┣ 📜 HomeSideNotes.vue
+  ```
 
 # seed-project-6connex
 
