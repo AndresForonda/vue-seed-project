@@ -29,21 +29,21 @@ views.
 These components can be grouped by functionality:
 ```
 📦 src
- ┣ 📂components
- ┃ ┣ 📂buttons
- ┃ ┃ ┣ 📜VButton.vue
- ┃ ┃ ┗ 📜VButtonClose.vue
- ┃ ┣ 📂inputs
- ┃ ┃ ┣ 📜VDatePickerInput.vue
- ┃ ┃ ┣ 📜VRangeDateInput.vue
- ┃ ┃ ┣ 📜VSelectInput.vue
- ┃ ┃ ┗ 📜VTextInput.vue
- ┃ ┗ 📂layout
- ┃ ┃ ┣ 📜TheAppShell.vue
- ┃ ┃ ┣ 📜TheBreadcrumb.vue
- ┃ ┃ ┣ 📜TheHeader.vue
- ┃ ┃ ┣ 📜TheNavBar.vue
- ┃ ┃ ┗ 📜TheSideBar.vue
+ ┣ 📂 components
+ ┃ ┣ 📂 buttons
+ ┃ ┃ ┣ 📜 VButton.vue
+ ┃ ┃ ┗ 📜 VButtonClose.vue
+ ┃ ┣ 📂 inputs
+ ┃ ┃ ┣ 📜 VDatePickerInput.vue
+ ┃ ┃ ┣ 📜 VRangeDateInput.vue
+ ┃ ┃ ┣ 📜 VSelectInput.vue
+ ┃ ┃ ┗ 📜 VTextInput.vue
+ ┃ ┗ 📂 layout
+ ┃ ┃ ┣ 📜 TheAppShell.vue
+ ┃ ┃ ┣ 📜 TheBreadcrumb.vue
+ ┃ ┃ ┣ 📜 TheHeader.vue
+ ┃ ┃ ┣ 📜 TheNavBar.vue
+ ┃ ┃ ┗ 📜 TheSideBar.vue
 ```
 
 ### Composed components
@@ -51,14 +51,14 @@ These components can be grouped by functionality:
 Sometimes a component could be composed for more than one component, we can do a group like this:
 ```
 📦 src
- ┣ 📂components
- ┃ ┣ 📂inputs
- ┃ ┃ ┣ 📂v-drop-files-input
- ┃ ┃ ┃ ┣ 📂components
- ┃ ┃ ┃ ┃ ┣ 📜VDropFilesArea.vue
- ┃ ┃ ┃ ┃ ┣ 📜VDropFilesFooter.vue
- ┃ ┃ ┃ ┃ ┗ 📜VDropFilesHeader.vue
- ┃ ┃ ┃ ┗ 📜VDropFilesInput.vue
+ ┣ 📂 components
+ ┃ ┣ 📂 inputs
+ ┃ ┃ ┣ 📂 v-drop-files-input
+ ┃ ┃ ┃ ┣ 📂 components
+ ┃ ┃ ┃ ┃ ┣ 📜 VDropFilesArea.vue
+ ┃ ┃ ┃ ┃ ┣ 📜 VDropFilesFooter.vue
+ ┃ ┃ ┃ ┃ ┗ 📜 VDropFilesHeader.vue
+ ┃ ┃ ┃ ┗ 📜 VDropFilesInput.vue
  ```
 
 The TheDropFilesInput.vue component is composed by the components TheDropFilesHeader.vue,
@@ -78,13 +78,13 @@ belongs only to one specific view, should remain in the view or module folder.
 
 ```
 📦 src
- ┣ 📂views
- ┃ ┣ 📂about
- ┃ ┃ ┣ 📂components
- ┃ ┃ ┃ ┗ 📜AboutList.vue
- ┃ ┃ ┣ 📂content
- ┃ ┃ ┃ ┗ 📜AboutContentLayout.vue
- ┃ ┃ ┗ 📜AboutLayout.vue
+ ┣ 📂 views
+ ┃ ┣ 📂 about
+ ┃ ┃ ┣ 📂 components
+ ┃ ┃ ┃ ┗ 📜 AboutList.vue
+ ┃ ┃ ┣ 📂 content
+ ┃ ┃ ┃ ┗ 📜 AboutContentLayout.vue
+ ┃ ┃ ┗ 📜 AboutLayout.vue
 ```
 
 - The AboutLayout.vue component serves as entry point of the view for the router.
@@ -99,11 +99,11 @@ The default views are a kind of single purpose views, they help to show informat
 
 ```
 📦 src
- ┣ 📂views
- ┃ ┣ 📂default-views
- ┃ ┃ ┣ 📜404.vue
- ┃ ┃ ┣ 📜ViewError.vue
- ┃ ┃ ┗ 📜ViewLoading.vue
+ ┣ 📂 views
+ ┃ ┣ 📂 default-views
+ ┃ ┃ ┣ 📜 404.vue
+ ┃ ┃ ┣ 📜 ViewError.vue
+ ┃ ┃ ┗ 📜 ViewLoading.vue
 ```
 
 - 404.vue view could be used when there is a wrong route.
@@ -117,20 +117,20 @@ The content of the view could be complex, maybe can be composed for many compone
 
 ```
 📦 src
- ┣ 📂views
- ┃ ┣ 📂home
- ┃ ┃ ┗ 📜HomeLayout.vue
- ┃ ┃ ┣ 📂components
- ┃ ┃ ┃ ┗ 📜HomeHeader.vue
- ┃ ┃ ┣ 📂content
- ┃ ┃ ┃ ┗ 📜HomeContentLayout.vue
- ┃ ┃ ┃ ┣ 📂components
- ┃ ┃ ┃ ┃ ┗ 📜HomeContentTable.vue
- ┃ ┃ ┃ ┃ ┣ 📂home-content-options
- ┃ ┃ ┃ ┃ ┃ ┗ 📜HomeContentOptions.vue
- ┃ ┃ ┃ ┃ ┃ ┣ 📂components
- ┃ ┃ ┃ ┃ ┃ ┃ ┣ 📜HomeContentOptionsList.vue
- ┃ ┃ ┃ ┃ ┃ ┃ ┗ 📜HomeContentOptionsModal.vue
+ ┣ 📂 views
+ ┃ ┣ 📂 home
+ ┃ ┃ ┗ 📜 HomeLayout.vue
+ ┃ ┃ ┣ 📂 components
+ ┃ ┃ ┃ ┗ 📜 HomeHeader.vue
+ ┃ ┃ ┣ 📂 content
+ ┃ ┃ ┃ ┗ 📜 HomeContentLayout.vue
+ ┃ ┃ ┃ ┣ 📂 components
+ ┃ ┃ ┃ ┃ ┗ 📜 HomeContentTable.vue
+ ┃ ┃ ┃ ┃ ┣ 📂 home-content-options
+ ┃ ┃ ┃ ┃ ┃ ┗ 📜 HomeContentOptions.vue
+ ┃ ┃ ┃ ┃ ┃ ┣ 📂 components
+ ┃ ┃ ┃ ┃ ┃ ┃ ┣ 📜 HomeContentOptionsList.vue
+ ┃ ┃ ┃ ┃ ┃ ┃ ┗ 📜 HomeContentOptionsModal.vue
 ```
 
 
@@ -148,13 +148,13 @@ Yeah, it could be overwhelming, it's nested, very nested, I mean, it's really ne
 
 ```
 📦 src
- ┣ 📂views
- ┃ ┣ 📂home
- ┃ ┃ ┣ 📂components
- ┃ ┃ ┣ 📂content
- ┃ ┃ ┃ ┣ 📂components
- ┃ ┃ ┃ ┃ ┣ 📂home-content-options
- ┃ ┃ ┃ ┃ ┃ ┣ 📂components
+ ┣ 📂 views
+ ┃ ┣ 📂 home
+ ┃ ┃ ┣ 📂 components
+ ┃ ┃ ┣ 📂 content
+ ┃ ┃ ┃ ┣ 📂 components
+ ┃ ┃ ┃ ┃ ┣ 📂 home-content-options
+ ┃ ┃ ┃ ┃ ┃ ┣ 📂 components
 ```
 
 
@@ -162,8 +162,8 @@ Yeah, it could be overwhelming, it's nested, very nested, I mean, it's really ne
 
 ```
 📦 src
- ┣ 📂views
- ┃ ┣ 📂home
+ ┣ 📂 views
+ ┃ ┣ 📂 home
 ```
 
 - Proposed vs Single root, file structure
@@ -172,45 +172,45 @@ Yeah, it could be overwhelming, it's nested, very nested, I mean, it's really ne
 
 ```
 📦 src
- ┣ 📂views
- ┃ ┣ 📂home
- ┃ ┃ ┣ 📜HomeLayout.vue
- ┃ ┃ ┣ 📂components
- ┃ ┃ ┃ ┣ 📜HomeHeader.vue
- ┃ ┃ ┃ ┣ 📜HomeFooter.vue
- ┃ ┃ ┃ ┣ 📜HomeOptions.vue
- ┃ ┃ ┃ ┗ 📜HomeSideNotes.vue
- ┃ ┃ ┣ 📂content
- ┃ ┃ ┃ ┣ 📜HomeContentLayout.vue
- ┃ ┃ ┃ ┣ 📂components
- ┃ ┃ ┃ ┃ ┣ 📜HomeContentTable.vue
- ┃ ┃ ┃ ┃ ┣ 📜HomeContentTools.vue
- ┃ ┃ ┃ ┃ ┣ 📂home-content-options
- ┃ ┃ ┃ ┃ ┃ ┣ 📜HomeContentOptions.vue
- ┃ ┃ ┃ ┃ ┃ ┣ 📂components
- ┃ ┃ ┃ ┃ ┃ ┃ ┣ 📜HomeContentOptionsList.vue
- ┃ ┃ ┃ ┃ ┃ ┃ ┣ 📜HomeContentOptionsModal.vue
- ┃ ┃ ┃ ┃ ┃ ┃ ┗ 📜HomeContentOptionsLoad.vue
+ ┣ 📂 views
+ ┃ ┣ 📂 home
+ ┃ ┃ ┣ 📜 HomeLayout.vue
+ ┃ ┃ ┣ 📂 components
+ ┃ ┃ ┃ ┣ 📜 HomeHeader.vue
+ ┃ ┃ ┃ ┣ 📜 HomeFooter.vue
+ ┃ ┃ ┃ ┣ 📜 HomeOptions.vue
+ ┃ ┃ ┃ ┗ 📜 HomeSideNotes.vue
+ ┃ ┃ ┣ 📂 content
+ ┃ ┃ ┃ ┣ 📜 HomeContentLayout.vue
+ ┃ ┃ ┃ ┣ 📂 components
+ ┃ ┃ ┃ ┃ ┣ 📜 HomeContentTable.vue
+ ┃ ┃ ┃ ┃ ┣ 📜 HomeContentTools.vue
+ ┃ ┃ ┃ ┃ ┣ 📂 home-content-options
+ ┃ ┃ ┃ ┃ ┃ ┣ 📜 HomeContentOptions.vue
+ ┃ ┃ ┃ ┃ ┃ ┣ 📂 components
+ ┃ ┃ ┃ ┃ ┃ ┃ ┣ 📜 HomeContentOptionsList.vue
+ ┃ ┃ ┃ ┃ ┃ ┃ ┣ 📜 HomeContentOptionsModal.vue
+ ┃ ┃ ┃ ┃ ┃ ┃ ┗ 📜 HomeContentOptionsLoad.vue
 ```
 
 - - Single root
 
 ```
 📦 src
- ┣ 📂views
- ┃ ┣ 📂home 
- ┃ ┃ ┣ 📜HomeContentOptions.vue
- ┃ ┃ ┣ 📜HomeContentOptionsList.vue
- ┃ ┃ ┣ 📜HomeContentOptionsModal.vue
- ┃ ┃ ┣ 📜HomeContentOptionsLoad.vue
- ┃ ┃ ┣ 📜HomeContentLayout.vue
- ┃ ┃ ┣ 📜HomeContentTable.vue 
- ┃ ┃ ┣ 📜HomeContentTools.vue
- ┃ ┃ ┣ 📜HomeFooter.vue
- ┃ ┃ ┣ 📜HomeHeader.vue
- ┃ ┃ ┣ 📜HomeLayout.vue
- ┃ ┃ ┣ 📜HomeOptions.vue
- ┃ ┃ ┣ 📜HomeSideNotes.vue
+ ┣ 📂 views
+ ┃ ┣ 📂 home 
+ ┃ ┃ ┣ 📜 HomeContentOptions.vue
+ ┃ ┃ ┣ 📜 HomeContentOptionsList.vue
+ ┃ ┃ ┣ 📜 HomeContentOptionsModal.vue
+ ┃ ┃ ┣ 📜 HomeContentOptionsLoad.vue
+ ┃ ┃ ┣ 📜 HomeContentLayout.vue
+ ┃ ┃ ┣ 📜 HomeContentTable.vue 
+ ┃ ┃ ┣ 📜 HomeContentTools.vue
+ ┃ ┃ ┣ 📜 HomeFooter.vue
+ ┃ ┃ ┣ 📜 HomeHeader.vue
+ ┃ ┃ ┣ 📜 HomeLayout.vue
+ ┃ ┃ ┣ 📜 HomeOptions.vue
+ ┃ ┃ ┣ 📜 HomeSideNotes.vue
 ```
 
 - Proposed vs Single root, working context (HomeContentOptions)
@@ -218,30 +218,30 @@ Yeah, it could be overwhelming, it's nested, very nested, I mean, it's really ne
 - - Proposed
 
 ```
-📂home-content-options
- ┣ 📜HomeContentOptions.vue
- ┣ 📂components
- ┃ ┣ 📜HomeContentOptionsList.vue
- ┃ ┣ 📜HomeContentOptionsModal.vue
- ┃ ┗ 📜HomeContentOptionsLoad.vue
+📂 home-content-options
+ ┣ 📜 HomeContentOptions.vue
+ ┣ 📂 components
+ ┃ ┣ 📜 HomeContentOptionsList.vue
+ ┃ ┣ 📜 HomeContentOptionsModal.vue
+ ┃ ┗ 📜 HomeContentOptionsLoad.vue
 ```
 
 - - Single root
 
 ```
- 📂home 
- ┣ 📜HomeContentOptions.vue
- ┣ 📜HomeContentOptionsList.vue
- ┣ 📜HomeContentOptionsModal.vue
- ┣ 📜HomeContentOptionsLoad.vue
- ┣ 📜HomeContentLayout.vue
- ┣ 📜HomeContentTable.vue 
- ┣ 📜HomeContentTools.vue
- ┣ 📜HomeFooter.vue
- ┣ 📜HomeHeader.vue
- ┣ 📜HomeLayout.vue
- ┣ 📜HomeOptions.vue
- ┣ 📜HomeSideNotes.vue
+ 📂 home 
+ ┣ 📜 HomeContentOptions.vue
+ ┣ 📜 HomeContentOptionsList.vue
+ ┣ 📜 HomeContentOptionsModal.vue
+ ┣ 📜 HomeContentOptionsLoad.vue
+ ┣ 📜 HomeContentLayout.vue
+ ┣ 📜 HomeContentTable.vue 
+ ┣ 📜 HomeContentTools.vue
+ ┣ 📜 HomeFooter.vue
+ ┣ 📜 HomeHeader.vue
+ ┣ 📜 HomeLayout.vue
+ ┣ 📜 HomeOptions.vue
+ ┣ 📜 HomeSideNotes.vue
 ```
 
 
