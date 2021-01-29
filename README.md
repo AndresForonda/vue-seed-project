@@ -28,7 +28,7 @@ views.
 
 These components can be grouped by functionality:
 ```
-📦src
+📦 src
  ┣ 📂components
  ┃ ┣ 📂buttons
  ┃ ┃ ┣ 📜VButton.vue
@@ -50,7 +50,7 @@ These components can be grouped by functionality:
 
 Sometimes a component could be composed for more than one component, we can do a group like this:
 ```
-📦src
+📦 src
  ┣ 📂components
  ┃ ┣ 📂inputs
  ┃ ┃ ┣ 📂v-drop-files-input
@@ -77,7 +77,7 @@ To avoid context-shifting, the components that are not reusable through the appl
 belongs only to one specific view, should remain in the view or module folder.
 
 ```
-📦src
+📦 src
  ┣ 📂views
  ┃ ┣ 📂about
  ┃ ┃ ┣ 📂components
@@ -98,7 +98,7 @@ belongs only to one specific view, should remain in the view or module folder.
 The default views are a kind of single purpose views, they help to show information about the state of the application.
 
 ```
-📦src
+📦 src
  ┣ 📂views
  ┃ ┣ 📂default-views
  ┃ ┃ ┣ 📜404.vue
@@ -116,7 +116,7 @@ The default views are a kind of single purpose views, they help to show informat
 The content of the view could be complex, maybe can be composed for many components, so having a content folder with its own layout file and components folder is a good way to organize it.
 
 ```
-📦src
+📦 src
  ┣ 📂views
  ┃ ┣ 📂home
  ┃ ┃ ┗ 📜HomeLayout.vue
@@ -147,7 +147,7 @@ Yeah, it could be overwhelming, it's nested, very nested, I mean, it's really ne
 - - Proposed
 
 ```
-📦src
+📦 src
  ┣ 📂views
  ┃ ┣ 📂home
  ┃ ┃ ┣ 📂components
@@ -161,7 +161,7 @@ Yeah, it could be overwhelming, it's nested, very nested, I mean, it's really ne
 - - Single root
 
 ```
-📦src
+📦 src
  ┣ 📂views
  ┃ ┣ 📂home
 ```
@@ -171,7 +171,7 @@ Yeah, it could be overwhelming, it's nested, very nested, I mean, it's really ne
 - - Proposed
 
 ```
-📦src
+📦 src
  ┣ 📂views
  ┃ ┣ 📂home
  ┃ ┃ ┣ 📜HomeLayout.vue
@@ -196,7 +196,7 @@ Yeah, it could be overwhelming, it's nested, very nested, I mean, it's really ne
 - - Single root
 
 ```
-📦src
+📦 src
  ┣ 📂views
  ┃ ┣ 📂home 
  ┃ ┃ ┣ 📜HomeContentOptions.vue
